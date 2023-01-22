@@ -26,13 +26,16 @@ Dependencies -
 
 
 More Information : 
-•	Capable of creating symbolic variables & algebraic-expressions from 'Text' and vice-versa. Allows manipulating them, perform algebraic-operations and programming on them.
+•	Capable of creating symbolic variables & algebraic-expressions from 'Text' and vice-versa. 
+    Allows manipulating them, perform algebraic-operations and programming on them.
 •	Can determine Derivatives of algebraic-expressions upto any given degree. 
 •	Handles symbolic-variables in Scalars, Vectors & Matrices. 
 •	Can give Symbolic-Solution to a system-of linear-equations. 
 •	Includes a wide array of advanced operators such as Matrix-operators, Vector-operators, Trigonometric, Logarithmic & Exponential operators.
-•	Offers functionalities of Approximate-Equality, a very useful feature well integrated with other features.  (eg: '2.0004' is nearly-equal-to '2' as well as '1.9991').  
-•	Gives numerical-solution for any consistent Over-Determined-System of Linear-Equations. (Another useful feature not offered by conventionally-available libraries to solve a System-of-Linear-Equations). 
+•	Offers functionalities of Approximate-Equality, a very useful feature well integrated with other features.  
+    (eg: '2.0004' is nearly-equal-to '2' as well as '1.9991').  
+•	Gives numerical-solution for any consistent Over-Determined-System of Linear-Equations. 
+    (Another useful feature not offered by conventionally-available libraries to solve a System-of-Linear-Equations). 
 
 
 
