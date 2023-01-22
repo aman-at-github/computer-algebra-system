@@ -168,7 +168,11 @@ RULES FOR COMMAND LINE  ALGEBRA :
 
 
     FUNDAMENTAL OPERATORS : 
-    
+        Operators never begin with Alpha-Numeric Characters.
+        Operators which include braces start with dollar-sign '$' and end with opening-brace '('
+          eg -  $SUM_( a , b , c ,d ) 
+            here  $SUM_(  is an operator.
+        
     
     1. Assignment Operator 
         Notation : [ ":=" ] 
