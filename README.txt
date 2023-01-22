@@ -7,11 +7,14 @@ Can create Algebraic-Expressions like MATLAB in Command-Line.
 Also allows programming on these objects of Algebraic-Expressions in Java.
 
 
+
 Functionalities include : 
   Differential Equations 
   2D Matrices 
   Solving System of Consistent Overdetermined Linear-Equations 
   Source Code has a wide array of useful functions on processing 3D-Vectors and Matrices. 
+
+
 
 
 
@@ -21,6 +24,8 @@ Source Code -
 Dependencies - 
   'gov.nist.math.jama-1.1.1.jar' is only used to solve Consistent System-Of-Linear-Equations and to calculate SVD of matrices.
   'org.json-chargebee-1.0.jar' is used for JSON functionality.
+
+
 
 
 
@@ -36,6 +41,8 @@ More Information :
     (eg: '2.0004' is nearly-equal-to '2' as well as '1.9991').  
 •	Gives numerical-solution for any consistent Over-Determined-System of Linear-Equations. 
     (Another useful feature not offered by conventionally-available libraries to solve a System-of-Linear-Equations). 
+
+
 
 
 
@@ -63,6 +70,8 @@ RULES FOR COMMAND LINE  ALGEBRA :
         // { { a } , { $SUM_( b ) } } is VALID 
         // (a+b) is NOT CORRECT 
         // ( a + b ) is CORRECT 
+    
+    
     
     
     
@@ -132,9 +141,31 @@ RULES FOR COMMAND LINE  ALGEBRA :
         // A#d'3[0][0] is INVALID 
         // A#d'3_[0][0] is VALID 
         
+    
+    
+    
+    
+    // EXPRESSION-IDENTIFIERS : 
+    
+    // Expression-Identifiers are NOT Variables but are similar Variables 
+    // Expression-Identifiers begin with '\' 
+        // \A is an Expression-Identifier and not a variable 
+        // A is a variable 
+    
+    // variables can only be assigned constant-values and cannot not be assigned expressions 
+        // A := ( B + C ) is NOT-VALID 
+        // \A := ( B + C ) is VALID  sinc \A is Expression-Identifier 
+        // \A := 9 is also VALID 
+        // A := ( 9 + $VAL_( B + C ) ) is VALID if B and C have values assigned 
+    
+    // Expression-Identifiers on RHS of assignment are replaced by the expression they hold 
+        // executing  \A := { { B , E } , { C + D ; E + F } }  assigns the given matrix-of-expressions to Expression-Identifier \A 
+        // then executing  ( A * \A#[0][1] )  gives  ( A * ( C + D ) )  since \A#[0][1] is replaced by the expression ( C + D ) 
         
         
         
+        
+
 
     FUNDAMENTAL OPERATORS : 
     
@@ -740,22 +771,3 @@ RULES FOR COMMAND LINE  ALGEBRA :
               "$A_COS_(" , "$A_COS(" , "$a_cos_(" , "$a_cos(" , 
               "$ACOS_(" , "$ACOS(" , "$acos_(" , "$acos(" , 
               "$COS_INV_(" , "$COS_INV(" , "$cos_inv_(" , "$cos_inv(" ] 
-        
-    
-    
-    // EXPRESSION-IDENTIFIERS : 
-    
-    // Expression-Identifiers are NOT Variables but are similar Variables 
-    // Expression-Identifiers begin with '\' 
-        // \A is an Expression-Identifier and not a variable 
-        // A is a variable 
-    
-    // variables can only be assigned constant-values and cannot not be assigned expressions 
-        // A := ( B + C ) is NOT-VALID 
-        // \A := ( B + C ) is VALID  sinc \A is Expression-Identifier 
-        // \A := 9 is also VALID 
-        // A := ( 9 + $VAL_( B + C ) ) is VALID if B and C have values assigned 
-    
-    // Expression-Identifiers on RHS of assignment are replaced by the expression they hold 
-        // executing  \A := { { B , E } , { C + D ; E + F } }  assigns the given matrix-of-expressions to Expression-Identifier \A 
-        // then executing  ( A * \A#[0][1] )  gives  ( A * ( C + D ) )  since \A#[0][1] is replaced by the expression ( C + D ) 
