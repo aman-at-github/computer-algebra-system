@@ -3,7 +3,7 @@
 Computer Algebra System
 
 
-Can create Algebraic-Expressions like Matlab in Command-Line.
+Can create Algebraic-Expressions like MATLAB in Command-Line.
 Also allows programming on these objects of Algebraic-Expressions in Java.
 
 
@@ -11,11 +11,33 @@ Functionalities include :
   Differential Equations 
   2D Matrices 
   Solving System of Consistent Overdetermined Linear-Equations 
-  
-Source Code has a wide array of useful functions on processing 3D-Vectors and Matrices. 
+  Source Code has a wide array of useful functions on processing 3D-Vectors and Matrices. 
 
 
 
+Source Code - 
+  'Equationsimplifier2.java' contains Sorce-Code, and when executed runs Command-Line Algebraic-Expressions like MATLAB.
+
+Dependencies - 
+  'gov.nist.math.jama-1.1.1.jar' is only used to solve Consistent System-Of-Linear-Equations and to calculate SVD of matrices.
+  'org.json-chargebee-1.0.jar' is used for JSON functionality.
+
+
+
+
+More Information : 
+•	Capable of creating symbolic variables & algebraic-expressions from 'Text' and vice-versa. Allows manipulating them, perform algebraic-operations and programming on them.
+•	Can determine Derivatives of algebraic-expressions upto any given degree. 
+•	Handles symbolic-variables in Scalars, Vectors & Matrices. 
+•	Can give Symbolic-Solution to a system-of linear-equations. 
+•	Includes a wide array of advanced operators such as Matrix-operators, Vector-operators, Trigonometric, Logarithmic & Exponential operators.
+•	Offers functionalities of Approximate-Equality, a very useful feature well integrated with other features.  (eg: '2.0004' is nearly-equal-to '2' as well as '1.9991').  
+•	Gives numerical-solution for any consistent Over-Determined-System of Linear-Equations. (Another useful feature not offered by conventionally-available libraries to solve a System-of-Linear-Equations). 
+
+
+
+
+RULES FOR COMMAND LINE  ALGEBRA : 
 
 // Input Strings must not contain '\b' ie backspace characters 
     
