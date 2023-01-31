@@ -91,11 +91,12 @@ RULES FOR COMMAND LINE  ALGEBRA :
     // "val(" is used to get value of an expression after '#' 
     // use of blank-spaces within "val( ... )" is mandatory 
     // use of blank-spaces outside "val( ... )" is not allowed 
+        // A#_[val(5-3)][0]  is  NOT VALID  ;  since use of spacing within "val( ... )" is mandatory 
         // A#_[val( 5 - 3 )][0]  is VALID 
         // A#_[_val( 5 - 3 )_][0]  is VALID 
-        // A#_[_VAL( 5 - 3 )_][0]  is INVALID   ; since "VAL(" instead of "val(" 
-        // A#_[_val_( 5 - 3 )_][0]  is INVALID   ; since "val_(" instead of "val(" 
-        // A#_[_$val( 5 - 3 )_][0]  is INVALID   ; since "$val(" instead of "val(" 
+        // A#_[_VAL( 5 - 3 )_][0]  is NOT VALID   ; since "VAL(" instead of "val(" 
+        // A#_[_val_( 5 - 3 )_][0]  is NOT VALID   ; since "val_(" instead of "val(" 
+        // A#_[_$val( 5 - 3 )_][0]  is NOT VALID   ; since "$val(" instead of "val(" 
         // A#_[_val( a + b )_][0]  is VALID   if 'a' and 'b' have values assigned to them  
     
     // IMPORTANT - Variable sizes cannot be changed later , so sizes must be specified during first use of variable 
